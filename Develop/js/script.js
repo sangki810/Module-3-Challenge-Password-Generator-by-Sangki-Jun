@@ -1,4 +1,23 @@
 // Assignment code here
+function generatePassword() {
+  var lengthSlct = prompt("How many characters would you like your password to contain? \ (Choose between 8-128 characters)");
+  var length = Number(lengthSlct)
+  if (!length) {
+    alert("Please choose a value between 8 and 128!");
+    return;
+  } else if (length < 8 || length > 128) {
+    alert("Please choose a value between 8 and 128!");
+    return; 
+  } 
+  var lowerSlct = confirm("Click OK to confirm including lower case characters.");
+  var upperSlct = confirm("Click OK to confirm including upper case characters.");
+  var numberSlct = confirm("Click OK to confirm including numeric characters.");
+  var specialSlct = confirm("Click OK to confirm including special characters.")
+  if (lowerSlct === false && upperSlct === false && numberSlct === false && specialSlct === false) {
+    alert("You must choose at least one type of character set!")
+  } 
+
+} 
 
 // object containing random generator functions
 var randonFunctions = {
@@ -34,17 +53,6 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var lengthSlct = prompt("How many characters would you like your password to contain? (8-128 characters)");
-  if (lengthSlct < "8" || lengthSlct > "128") {
-    alert("Please choose a value between 8 and 128 characters!");
-  } else if (lengthSlct !== "number") {
-    alert("Please input a numberic value between 8 and 128!");
-  } else {
-    var lowerSlct = confirm("Click OK to confirm including lower case characters.");
-    var upperSlct = confirm("Click OK to confirm including upper case characters.");
-    var numberSlct = confirm("Click OK to confirm including numeric characters.");
-    var specialSlct = confirm("Click OK to confirm including special characters.");
-  }
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   
