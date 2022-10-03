@@ -1,12 +1,22 @@
 // Assignment code here
+// Popup prompts and confirms to decide length and character tyoes of password
 function selectors() {
-  var lengthSlct = prompt("How many characters would you like our password to contain?")
+  var lengthSlct = prompt("How many characters would you like your password to contain?")
   var lowerSlct = confirm("Click OK to confirm including lower case characters.");
   var upperSlct = confirm("Click OK to confirm including upper case characters.");
   var numberSlct = confirm("Click OK to confirm including numeric characters.");
   var specialSlct = confirm("Click OK to confirm including special characters.");
 }
 
+// object containing random generator functions
+var randonFunctions = {
+  lowerChar: randomLower,
+  upperChar: randomUpper,
+  numberChar: randomNumber,
+  specialChar: randomSpecial,
+}
+
+// random character generator functions
 function randomLower() {
   var lower = "abcdefghijklmnopqrstuvwxyz"
   return lower[Math.floor(Math.random() * lower.length)];
