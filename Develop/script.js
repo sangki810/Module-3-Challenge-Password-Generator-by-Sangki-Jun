@@ -1,5 +1,6 @@
 // Assignment code here
 function selectors() {
+  var lengthSlct = prompt("How many characters would you like our password to contain?")
   var lowerSlct = confirm("Click OK to confirm including lower case characters.");
   var upperSlct = confirm("Click OK to confirm including upper case characters.");
   var numberSlct = confirm("Click OK to confirm including numeric characters.");
@@ -8,22 +9,22 @@ function selectors() {
 
 function randomLower() {
   var lower = "abcdefghijklmnopqrstuvwxyz"
-  return lower[Math.floor(Math.random() * lower.length) ];
+  return lower[Math.floor(Math.random() * lower.length)];
 }
 
 function randomUpper() {
   var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-  return upper[Math.floor(Math.random() * upper.length) ];
+  return upper[Math.floor(Math.random() * upper.length)];
 }
 
 function randomNumber() {
   var number = "0123456789"
-  return number[Math.floor(Math.random() * number.length) ];
+  return number[Math.floor(Math.random() * number.length)];
 }
 
 function randomSpecial() {
   var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
-  return special[Math.floor(Math.random() * special.length) ];
+  return special[Math.floor(Math.random() * special.length)];
 }
 
 // Get references to the #generate element
