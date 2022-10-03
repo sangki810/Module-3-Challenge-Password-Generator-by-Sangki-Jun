@@ -1,4 +1,11 @@
 // Assignment code here
+function selectors() {
+  var lowerSlct = confirm("Click OK to confirm including lower case characters.");
+  var upperSlct = confirm("Click OK to confirm including upper case characters.");
+  var numberSlct = confirm("Click OK to confirm including numeric characters.");
+  var specialSlct = confirm("Click OK to confirm including special characters.");
+}
+
 function randomLower() {
   var lower = "abcdefghijklmnopqrstuvwxyz"
   return lower[Math.floor(Math.random() * lower.length) ];
@@ -18,8 +25,6 @@ function randomSpecial() {
   var special = " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
   return special[Math.floor(Math.random() * special.length) ];
 }
-
-console.log(randomSpecial())
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
