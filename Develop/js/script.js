@@ -12,11 +12,11 @@ function generatePassword() {
   var lowerSlct = confirm("Click OK to confirm including lower case characters.");
   var upperSlct = confirm("Click OK to confirm including upper case characters.");
   var numberSlct = confirm("Click OK to confirm including numeric characters.");
-  var specialSlct = confirm("Click OK to confirm including special characters.")
+  var specialSlct = confirm("Click OK to confirm including special characters.");
   if (lowerSlct === false && upperSlct === false && numberSlct === false && specialSlct === false) {
-    alert("You must choose at least one type of character set!")
-  } 
-
+    alert("You must choose at least one type of character set!");
+  }
+  alert("You chose to include:\nLower case: " + lowerSlct + "\nUpper case: " + upperSlct + "\nNumbers: " + numberSlct + "\nSpecial Characters: " + specialSlct);
 } 
 
 // object containing random generator functions
